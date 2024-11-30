@@ -1,7 +1,6 @@
 package resources;
 
 import users.*;
-
 import java.time.LocalDate;
 import interfejses.Rentable;
 import exceptions.NoAvailableResourceException;
@@ -31,9 +30,7 @@ public class Journal extends Resource implements Rentable {
 
     @Override
     public void rent(User user) throws NoAvailableResourceException {
-        if (this.user != null) {
-            throw new NoAvailableResourceException("Journal unavailable");
-        }
+        if (this.user != null) throw new NoAvailableResourceException("Journal unavailable");
         this.user = user;
         this.rentDate = LocalDate.now();
         this.dueDate = user instanceof Student ? rentDate.plusMonths(1) : rentDate.plusDays(10);
