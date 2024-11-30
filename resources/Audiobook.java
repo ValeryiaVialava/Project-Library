@@ -1,7 +1,6 @@
 package resources;
 
 import users.User;
-
 import interfejses.Digital;
 import java.time.LocalDate;
 
@@ -19,7 +18,6 @@ public class Audiobook extends Book implements Digital {
     public String getStatus() {
         return Status.DIGITAL.name();
     }
-
 
     @Override
     public void print() {
@@ -41,6 +39,5 @@ public class Audiobook extends Book implements Digital {
     public LocalDate getDueDate() {
         return null;
     }
-
 }
 
