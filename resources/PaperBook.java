@@ -1,8 +1,6 @@
 package resources;
 
 import users.*;
-
-
 import java.time.LocalDate;
 import exceptions.NoAvailableResourceException;
 import interfejses.Rentable;
@@ -33,7 +31,6 @@ public class PaperBook extends Book implements Rentable {
         if (this.user != null) {
             System.out.println("Book is rented");
             throw new NoAvailableResourceException("PaperBook is already rented");
-
         }
         this.user = user;
         LocalDate rentDate = LocalDate.now();
@@ -51,5 +48,4 @@ public class PaperBook extends Book implements Rentable {
     public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
-
 }
