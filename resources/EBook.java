@@ -2,7 +2,6 @@ package resources;
 
 import interfejses.Digital;
 import users.User;
-
 import java.time.LocalDate;
 
 public class EBook extends Book implements Digital {
@@ -25,7 +24,6 @@ public class EBook extends Book implements Digital {
     public String getStatus() {
         return Status.DIGITAL.name();
     }
-
 
     @Override
     public void download() {
