@@ -15,10 +15,11 @@ public abstract class Resource {
     }
 
     public abstract void print();
+    
     public abstract String getStatus();
 
-
     public abstract User getUser();
+    
     public abstract LocalDate getDueDate();
 
     public String getTitle() {
